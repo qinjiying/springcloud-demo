@@ -1,0 +1,31 @@
+eureka:
+  client:
+    registerWithEureka: true # 服务注册开关
+    fetchRegistry: true # 服务发现开关
+    serviceUrl: # 注册到哪一个Eureka Server服务注册中心，多个中间用逗号分隔
+      defaultZone: http://localhost:6001/eureka,http://localhost:6002/eureka/
+  instance:
+    instanceId: ${spring.application.name}:${server.port} # 指定实例ID,就不会显示主
+    preferIpAddress: true #访问路径可以显示IP地址
+server:
+  port: 8002
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.demo.springcloud.entities
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+spring:
+  application:
+    name: microservice-product
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/springcloud_db02?serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    dbcp2:
+      min-idle: 5 # 数据库连接池的最小维持连接数
+      initial-size: 5 # 初始化连接数
+      max-total: 5 # 最大连接数
+      max-wait-millis: 150 # 等待连接获取的最大超时时间
+
