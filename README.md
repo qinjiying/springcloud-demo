@@ -1,8 +1,4 @@
-# springcloud-demo
-microservice-cloud-01 父工程（Project）下初始化 3个子模块（Module）：
-  microservice-cloud-02-api 封装的整体Entity/接口/公共配置等
-  microservice-cloud-03-provider-product-8001 微服务的服务提供者Provider
-  microservice-cloud-04-consumer-product-80 微服务的服务消费者Consumer
+# springcloud-demo  microservice-cloud-01 父工程（Project）下初始化 3个子模块（Module）：  microservice-cloud-02-api 封装的整体Entity/接口/公共配置等  microservice-cloud-03-provider-product-8001 微服务的服务提供者Provider  microservice-cloud-04-consumer-product-80 微服务的服务消费者Consumer
   microservice-cloud-05-eureka-6001 Eureka Server 服务注册中心1
   microservice-cloud-05-eureka-6002 Eureka Server 服务注册中心2
   microservice-cloud-06-provider-product-8002 微服务的服务提供者Provider
